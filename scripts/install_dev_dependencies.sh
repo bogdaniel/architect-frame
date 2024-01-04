@@ -26,11 +26,13 @@ composer require --dev \
     friendsofphp/php-cs-fixer \
     phpstan/extension-installer \
     phpstan/phpstan-symfony \
+    phpstan/phpstan \
     symfony/browser-kit \
     phpunit/phpunit \
     symfony/css-selector \
     symfony/requirements-checker \
     symfony/stopwatch \
-    symfony/web-profiler-bundle
+    symfony/web-profiler-bundle \
+    qossmic/deptrac-shim
 
 printf "Development dependencies installed."
