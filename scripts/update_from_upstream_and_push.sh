@@ -12,5 +12,5 @@ git merge upstream/main
 # Push the updates to your fork on GitHub
 git push origin main
 
-echo "Updates merged into main and pushed to fork."
+printf "Updates merged into main and pushed to fork."
 

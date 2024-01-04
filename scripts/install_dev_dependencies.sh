@@ -7,17 +7,17 @@ command_exists() {
 
 # Check if PHP is installed
 if command_exists php; then
-    echo "PHP is installed."
+    printf "PHP is installed."
 else
-    echo "PHP is not installed. Please install PHP."
+    printf "PHP is not installed. Please install PHP."
     exit 1
 fi
 
 # Check if Composer is installed
 if command_exists composer; then
-    echo "Composer is installed."
+    printf "Composer is installed."
 else
-    echo "Composer is not installed. Please install Composer."
+    printf "Composer is not installed. Please install Composer."
     exit 1
 fi
 
@@ -33,4 +33,4 @@ composer require --dev \
     symfony/stopwatch \
     symfony/web-profiler-bundle
 
-echo "Development dependencies installed."
+printf "Development dependencies installed."

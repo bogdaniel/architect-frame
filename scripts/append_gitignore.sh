@@ -13,8 +13,8 @@ GITIGNORE_EDITOR="${PROJECT_ROOT}/files/.gitignore-editor"
 if [ -f "${GITIGNORE}" ] && [ -f "${GITIGNORE_EDITOR}" ]; then
     # Append the contents of .gitignore-editor to .gitignore
     cat "${GITIGNORE_EDITOR}" >> "${GITIGNORE}"
-    echo "Contents of .gitignore-editor appended to .gitignore."
+    printf "Contents of .gitignore-editor appended to .gitignore."
 else
     # Display an error message if either file is missing
-    echo "Error: Either .gitignore or .gitignore-editor does not exist."
+    printf "Error: Either .gitignore or .gitignore-editor does not exist."
 fi
