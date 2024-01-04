@@ -39,6 +39,22 @@ test: ## Start tests with phpunit, pass the parameter "c=" to add options to php
 	@$(eval c ?=)
 	@$(DOCKER_COMP) exec -e APP_ENV=test php bin/phpunit $(c)
 
+ls:
+	@$(PHP_CONT) sh -c 'ls $(path)'
+
+setup-editor: ## Setup the editor config files
+	./scripts/append_gitignore.sh
+
+dev:
+	@$(PHP_CONT) sh -c './scripts/install_dev_dependencies.sh'
+
+workdir:
+	@$(PHP_CONT) sh -c 'pwd'
+
+install-dev-deps:
+	@test -x ./scripts/install_dev_dependencies.sh || chmod +x ./scripts/install_dev_dependencies.sh
+	@(./scripts/install_dev_dependencies.sh || $(PHP_CONT) sh -c './scripts/install_dev_dependencies.sh')
+
 
 ## —— Composer 🧙 ——————————————————————————————————————————————————————————————
 composer: ## Run composer, pass the parameter "c=" to run a given command, example: make composer c='req symfony/orm-pack'

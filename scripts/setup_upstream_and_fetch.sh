@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Navigate to the repository directory
 # cd /path/to/your/repository
