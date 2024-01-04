@@ -20,6 +20,11 @@ if [ "$1" = 'frankenphp' ] || [ "$1" = 'php' ] || [ "$1" = 'bin/console' ]; then
 			echo "To finish the installation please press Ctrl+C to stop Docker Compose and run: docker compose up --build -d --wait"
 			sleep infinity
 		fi
+
+		curl "https://github.com/jolicode/castor/releases/latest/download/castor.linux-amd64.phar" -Lfso $HOME/.local/bin/castor && \
+            chmod u+x $HOME/.local/bin/castor && \
+            castor --version || \
+            (echo "Could not install castor. Is the target directory writeable?" && (exit 1))
 	fi
 
 	if [ -z "$(ls -A 'vendor/' 2>/dev/null)" ]; then
