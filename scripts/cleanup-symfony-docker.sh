@@ -21,6 +21,7 @@ tests
 vendor
 castor.php
 .castor.stub.php
+tmp
 "
 
 # Loop through the list and remove each file/directory if it exists

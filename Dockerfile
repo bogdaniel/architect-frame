@@ -23,6 +23,7 @@ RUN apk add --no-cache \
 		gettext \
 		git \
     	gpg \
+    	gpg-agent \
 	;
 
 RUN set -eux; \
