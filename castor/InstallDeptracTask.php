@@ -1,9 +1,10 @@
 <?php
 
-namespace DeepTrack;
+namespace DepTrac;
 
 use Castor\Attribute\AsTask;
 
+use function Castor\capture;
 use function Castor\io;
 use function Castor\run;
 
@@ -21,14 +22,8 @@ function install(): void {
         return;
     }
 
-    $command = ['deptrack', 'init'];
+    $captured = capture(['deptrac', 'init']);
 
-    if (!run($command)) {
-        $io->error("Failed to install init Deptrac.");
-        return;
-    }
-
-
+    $io->success($captured);
     $io->success("Deptrac has been successfully installed.");
 }
-

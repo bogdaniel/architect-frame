@@ -22,6 +22,8 @@ vendor
 castor.php
 .castor.stub.php
 tmp
+.deptrac.cache
+deptrac.yaml
 "
 
 # Loop through the list and remove each file/directory if it exists
