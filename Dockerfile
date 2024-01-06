@@ -22,6 +22,7 @@ RUN apk add --no-cache \
 		file \
 		gettext \
 		git \
+    	gpg \
 	;
 
 RUN set -eux; \
@@ -37,6 +38,7 @@ RUN set -eux; \
 
 COPY --link frankenphp/conf.d/app.ini $PHP_INI_DIR/conf.d/
 COPY --link --chmod=755 frankenphp/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
+COPY --link --chmod=755 scripts/install_castor.sh /usr/local/bin/install_castor
 COPY --link frankenphp/Caddyfile /etc/caddy/Caddyfile
 
 ENTRYPOINT ["docker-entrypoint"]
