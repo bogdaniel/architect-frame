@@ -19,6 +19,7 @@ FILES_AND_DIRS=(
     "templates"
     "tests"
     "vendor"
+    "castor.php"
 )
 
 # Loop through the list and remove each file/directory if it exists
