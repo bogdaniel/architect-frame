@@ -24,6 +24,9 @@ castor.php
 tmp
 .deptrac.cache
 deptrac.yaml
+.php-cs-fixer.cache
+rector.php
+tools/
 "
 
 # Loop through the list and remove each file/directory if it exists
