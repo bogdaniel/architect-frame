@@ -11,6 +11,8 @@ function installTestPack(): void {
     io()->info('Installing symfony/test-pack and related packages...\n');
     $packages = [
         "symfony/test-pack",
+        "dama/doctrine-test-bundle",
+        "symfony/thanks",
     ];
 
     $command = "composer require --dev " . implode(' ', $packages);

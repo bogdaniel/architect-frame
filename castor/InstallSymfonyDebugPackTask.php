@@ -11,6 +11,7 @@ function installDebugPack(): void {
     io()->info('Installing symfony/debug-pack and related packages...\n');
     $packages = [
         "symfony/debug-pack",
+        "symfony/thanks",
     ];
 
     $command = "composer require --dev " . implode(' ', $packages);

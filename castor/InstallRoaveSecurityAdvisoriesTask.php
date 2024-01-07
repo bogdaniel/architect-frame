@@ -1,17 +1,18 @@
 <?php
-namespace Symfony;
+namespace Optional;
 
 use Castor\Attribute\AsTask;
 
 use function Castor\io;
 use function Castor\run;
 
-#[AsTask(name: 'maker-bundle', description: 'Install symfony/maker-bundle!')]
-function installMakerBundle(): void {
-    io()->info('Installing symfony/maker-bundle and related packages...\n');
+#[AsTask(name: 'security-advisories', description: 'Install roave/security-advisories!')]
+function installSecurityAdvisories(): void
+{
+    $io = io();
+        io()->info('Installing roave/security-advisories and related packages...\n');
     $packages = [
-        "symfony/maker-bundle",
-        "symfony/thanks",
+        "roave/security-advisories:dev-latest",
     ];
 
     $command = "composer require --dev " . implode(' ', $packages);
